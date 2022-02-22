@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html.twig' %}
+{% block title %}login
+{% endblock %}
+{% block stylesheets %}<link rel="stylesheet" href="{{ asset('assets/css/login.css') }}">
+{% endblock %}
+
+{% block body %}
+	{% block div %}
+		<div class="login-page">
+			<div class="form" action="formProcess" method="POST">
+				<p>
+					<strong>Continuez à faire du bon travail !</strong>
+					Les entreprises rêvent de trouver des employés comme vous, merci pour votre dévouement.</p>
+				<form class="login-form">
+					<label for="email">email</label>
+					<input type="text" placeholder="email"/>
+					<label for="password">Mot de passe</label>
+					<input type="password" placeholder="password"/>
+					<button>login</button>
+					<p class="message">Vous avez oubliez mot de passe?
+						<a href="#">Demander un nouveau
+						</a>
+					</p>
+				</form>
+			</div>
+
+		</div>
+
+	{% endblock %}
+	{% block javascripts %}{% endblock %}
+{% endblock %}
